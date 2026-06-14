@@ -1,0 +1,364 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>BrandPro | Branding & Advertising Agency</title>
+      <style>
+         body {
+         margin: 0;
+         font-family: 'Arial, sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background: #fff;
+         }
+         header {
+         background: #111;
+         color: #fff;
+         padding: 10px 0;
+         text-align: center;
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         }
+         nav ul {
+         list-style: none;
+         padding: 0;
+         margin: 10px 0 0 0;
+         }
+         nav ul li {
+         display: inline;
+         margin: 0 15px;
+         }
+         nav ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-weight: bold;
+         }
+         nav ul li a:hover {
+         text-decoration: underline;
+         }
+         .image-carousel {
+         height: 180px;
+         display: flex;
+         overflow-x: hidden; /* Hide scrollbar */
+         padding: 10px 0;
+         gap: 15px;
+         border-top: 1px solid #444;
+         border-bottom: 1px solid #444;
+         scroll-behavior: smooth;
+         }
+         .image-carousel img {
+         flex-shrink: 0;
+         width: 250px;
+         height: 150px;
+         object-fit: contain;
+         border-radius: 6px;
+         box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+         cursor: pointer;
+         transition: transform 0.3s ease;
+         }
+         .image-carousel img:hover {
+         transform: scale(1.1);
+         }
+         .carousel-container {
+         width: 100%;
+         overflow: hidden;
+         position: relative;
+         background: #fff;
+         padding: 20px 0;
+         }
+         .carousel-track {
+         display: flex;
+         width: max-content;
+         animation: scroll 20s linear infinite;
+         }
+         .carousel-track img {
+         height: 200px;
+         margin-right: 20px;
+         border-radius: 8px;
+         }
+         @keyframes scroll {
+         0% {
+         transform: translateX(0);
+         }
+         100% {
+         transform: translateX(-90%);
+         }
+         }
+         .hero {
+			background: url('img/banner.jpg') center/cover no-repeat;
+			color: white;
+			text-align: center;
+			padding: 200px 20px 50px 0px;
+			text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+		}
+         .hero h2 {
+         font-size: 3rem;
+         margin-bottom: 0.3em;
+         }
+         .hero p{
+         font-size: 1.4rem;
+         max-width: 600px;
+         margin: 0 auto;
+         }
+         .section {
+         padding: 10px 10px;
+         max-width: 1100px;
+         margin: 0 auto;
+         }
+         .section h2 {
+         font-size: 2.5rem;
+         margin-bottom: 20px;
+         color: #222;
+         border-bottom: 3px solid #ff6f61;
+         display: inline-block;
+         padding-bottom: 5px;
+         }
+         .services, .portfolio {
+         background: #f9f9f9;
+         border-radius: 10px;
+         }
+         .card-container {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 25px;
+         margin-top: 30px;
+         }
+         .card {
+         background: white;
+         padding: 25px;
+         border-radius: 10px;
+         width: 300px;
+         box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+         transition: transform 0.3s ease;
+         }
+         .card:hover {
+         transform: translateY(-5px);
+         box-shadow: 8px 20px rgba(0,0,0,0.2);
+         }
+         .card h3 {
+         margin-top: 0;
+         color: #ff6f61;
+         }
+         .card p {
+         font-size: 1rem;
+         color: #555;
+         }
+         .portfolio img {
+         width: 100%;
+         border-radius: 8px;
+         margin-bottom: 10px;
+         object-fit: cover; 
+         height: 180px;
+         }
+         .about p{
+         max-width: 700px;
+         margin: 0 auto;
+         font-size: 1.1rem;
+         color: #444;
+         line-height: 1.8;
+         }
+         #contact p {
+         font-size: 1.1rem;
+         margin: 10px 0;
+         }
+         form {
+         max-width: 500px;
+         margin: 30px auto 0 auto;
+         text-align: left;
+         }
+         form label{
+         display: block;
+         margin-bottom: 6px;
+         font-weight: bold;
+         color: #333;
+         }
+         form input, form textarea {
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 20px;
+         border-radius: 5px;
+         border: 1px solid #ccc;
+         font-size: 1rem;
+         resize: vertical;
+         }
+         form button {
+         background: #ff6f61;
+         border: none;
+         padding: 12px 25px;
+         color: white; font-size: 1.1rem;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         }
+         form button:hover {
+         background: #e45b4d;
+         }
+         footer {
+         background: #111;
+         color: #fff;
+         text-align: center;
+         padding: 20px 10px;
+         margin-top: 40px;
+         font-size: 0.9rem;
+         }
+         @media (max-width: 768px) {
+         .card-container {
+         flex-direction: column;
+         align-items: center;
+         }
+         .card {
+         width: 90%;
+         }
+         .hero h2 {
+         font-size: 2rem;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1 style="font-size: 50px;">BrandScape Corporation of India</h1>
+         <nav>
+            <ul>
+               <li><a href="#services">Services</a></li>
+               <li><a href="#portfolio">Portfolio</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+      </header>
+      <section class="hero">
+         <h2>We Build Brands That Shine</h2>
+         <p>Your identity. Your message. Your story told brilliantly with creativity and impact.</p>
+      </section>
+      <section id="services" class="section services">
+         <h2>Our Services</h2>
+         <div class="card-container">
+            <div class="card">
+               <h3>Brand Identity</h3>
+               <p>We craft logos, develop comprehensive brand guidelines, and create distinct voices and tones that reflect your unique personality and values.</p>
+            </div>
+            <div class="card">
+               <h3>Digital Marketing</h3>
+               <p>Boost your online presence with SEO strategies, targeted social media campaigns, engaging email marketing, and detailed performance analytics.</p>
+            </div>
+            <div class="card">
+               <h3>Advertising Campaigns</h3>
+               <p>From concept to execution, we create compelling ad campaigns across various platforms including TV, print, and digital to maximize reach and impact.</p>
+            </div>
+            <div class="card">
+               <h3>Content Creation</h3>
+               <p>Engage your audience with original content including blog posts, videos, infographics, and social media posts tailored to your brand voice.</p>
+            </div>
+            <div class="card">
+               <h3>Market Research</h3>
+               <p>Gain valuable insights about your target market and competitors to inform strategy and make data-driven branding decisions.</p>
+            </div>
+         </div>
+      </section>
+      <section id="portfolio" class="section portfolio">
+         <h2>Portfolio</h2>
+         <p>Take a look at some of our successful projects where we transformed brands and elevated advertising efforts.</p>
+         <div class="card-container">
+            <div class="card">
+               <img src="img/Branding1.jpg" alt="Project 1 - Coffee Brand Redesig" />
+               <h3>Coffee Brand Redesign</h3>
+               <p>Complete rebranding of a local coffee chain with a fresh logo, packaging, and social media presence that increased sales by 40%.</p>
+            </div>
+            <div class="card">
+               <img src="img/Branding2.jpg" alt="Project 2 - Tech Startup Launch" />
+               <h3>Tech Startup Launch</h3>
+               <p>Developed a sleek brand identity and digital marketing strategy that attracted over 10,000 users in the first 3 months.</p>
+            </div>
+            <div class="card">
+               <img src="img/Branding4.png" alt="Project 3 - Fashion Campaign" /> 
+               <h3>Fashion Campaign</h3>
+               <p>Created a vibrant, engaging campaign that boosted the client's social media following by 50% and increased online sales.</p>
+            </div>
+         </div>
+      </section>
+      <section id="Client" class="section about">
+         <h2>Our Happy Client</h2>
+         <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+               <img src="img/HPCL.jpg" alt="Client 1 Logo" />
+               <img src="img/sbi-life.png" width="350px" alt="Client 4 Logo" />
+               <img src="img/DrLalPathlabs.jpg" alt="Client 3 Logo" />
+               <img src="img/SBI.jpg" alt="Client 2 Logo" />
+               <img src="img/sbi-life.png" width="350px" alt="Client 4 Logo" />
+               <img src="img/HPCL.jpg" alt="Client 1 Logo" />
+               <img src="img/DrLalPathlabs.jpg" alt="Client 3 Logo" />
+               <img src="img/SBI.jpg" alt="Client 2 Logo" />
+            </div>
+         </div>
+      </section>
+      <section id="about" class="section about">
+         <h2>About Us</h2>
+         <p>
+            BrandPro is a dedicated team of creative thinkers, strategists, and marketers passionate about building memorable brands. We combine data-driven insights with innovative ideas to deliver solutions that connect with your audience and drive results. 
+         </p>
+      </section>
+      <section id="contact" class="section contact">
+         <h2>Contact Us</h2>
+         <p>Have a project or idea? We'd love to hear from you!</p>
+         <p>Email: <a href="mailto: brandscapec@gmail.com">brandscapec@gmail.com</a></p>
+         <p>Phone: +91 9205706979/7042016979</p>
+         <form onsubmit="return validateForm ()">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required />
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            <button type="submit">Send Message</button>
+         </form>
+      </section>
+      <footer>
+         <p>© 2025 BrandScape Corporation of India. All rights reserved.</p>
+      </footer>
+      <script>
+         function validateForm() {
+         const name = document.getElementById('name').value.trim(); 
+         const email = document.getElementById('email').value.trim();
+         const message = document.getElementById('message').value.trim();
+         
+         if (!name || !email || !message) {
+         alert('Please fill in all required fields.'); 
+         return false;
+         }
+         const emailRegex = /^[^\s@]+@[^\s@]+\. [^\s@]+$/; 
+         if (!emailRegex.test (email)) {
+         alert('Please enter a valid email address.'); 
+         return false;
+         }
+         alert('Thank you for your message! We will get back to you soon."); 
+         return true;
+         }
+         
+         const carousel = document.getElementById('image-carousel');
+         let scrollAmount =  0;
+         const speed = 1;
+         let requestId;
+         
+         
+         function autoScroll() {
+         scrollAmount += speed;
+         if (scrollAmount >= carousel.scrollWidth / 2) {
+         scrollAmount = 0;
+         }
+         carousel.scrollLeft = scrollAmount;
+         requestId = requestAnimationFrame(autoScroll);
+         }
+         carousel.addEventListener('mouseenter', () => {
+         cancelAnimationFrame(requestId);
+         });
+         carousel.addEventListener('mouseleave', () => {
+         requestId = requestAnimationFrame(autoScroll);
+         });
+         // Start auto scroll initially
+         requestId = requestAnimationFrame(autoScroll); 
+      </script>
+   </body>
+</html>
