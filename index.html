@@ -103,7 +103,7 @@
          }
          .section {
          padding: 10px 10px;
-         max-width: 1500px;
+         max-width: 1250px;
          margin: 0 auto;
          }
          .section h2 {
@@ -153,7 +153,6 @@
          height: 180px;
          }
          .about p{
-         max-width: 700px;
          margin: 0 auto;
          font-size: 1.1rem;
          color: #444;
@@ -161,7 +160,6 @@
          }
          #contact p {
          font-size: 1.1rem;
-         margin: 10px 0;
          }
          form {
          max-width: 500px;
@@ -214,6 +212,93 @@
          .hero h2 {
          font-size: 2rem;
          }
+         }
+         .container {
+         display: flex;
+         max-width: 1200px;
+         margin: 50px auto;
+         padding: 20px;
+         background: #fff;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         border-radius: 8px;
+         }
+         .left {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         padding-right: 30px;
+         }
+         .box {
+         display: flex;
+         align-items: flex-start;
+         gap: 15px;
+         background: #fefefe;
+         border: 1px solid #eee;
+         padding: 15px;
+         border-radius: 6px;
+         transition: transform 0.2s ease;
+         }
+         .box:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         }
+         .box img {
+         width: 40px;
+         height: 40px;
+         }
+         .box h3 {
+         margin: 0;
+         color: #d32f2f;
+         }
+         .box p {
+         margin: 5px 0 0;
+         font-size: 14px;
+         line-height: 1.4;
+         }
+         .right {
+         flex: 2;
+         }
+         .right h2 {
+         color: #d32f2f;
+         margin-bottom: 15px;
+         }
+         .right p {
+         font-size: 15px;
+         line-height: 1.6;
+         }
+         .contact-section {
+         background: #fff;
+         padding: 30px;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         }
+         .contact-section h2 {
+         color: #d32f2f;
+         margin-bottom: 20px;
+         text-align: center;
+         }
+         .contact-item {
+         display: flex;
+         align-items: flex-start;
+         margin-bottom: 5px;
+         }
+         .contact-item img {
+         width: 24px;
+         height: 24px;
+         margin-right: 10px;
+         }
+         .contact-item p {
+         margin: 0;
+         font-size: 15px;
+         line-height: 1.5;
+         }
+         .contact-item a {
+         color: #d32f2f;
+         text-decoration: none;
+         }
+         .contact-item a:hover {
+         text-decoration: underline;
          }
       </style>
    </head>
@@ -351,23 +436,75 @@
       <section id="about" class="section about">
          <h2>About Us</h2>
          <p>
-            BrandPro is a dedicated team of creative thinkers, strategists, and marketers passionate about building memorable brands. We combine data-driven insights with innovative ideas to deliver solutions that connect with your audience and drive results. 
+            BrandScape Corporation of India is a dedicated team of creative thinkers, strategists, and marketers passionate about building memorable brands. We combine data-driven insights with innovative ideas to deliver solutions that connect with your audience and drive results. 
          </p>
+         <div class="container">
+            <!-- Left Section -->
+            <div class="left">
+               <div class="box">
+                  <img src="https://img.icons8.com/ios-filled/50/FF0000/user.png" alt="Experienced Artists">
+                  <div>
+                     <h3>Experienced Artists</h3>
+                     <p>We work with experts to make sure our customers get the best out of our services.</p>
+                  </div>
+               </div>
+               <div class="box">
+                  <img src="https://img.icons8.com/ios-filled/50/FF0000/thumb-up.png" alt="Quality Work">
+                  <div>
+                     <h3>Quality Work, Every Time</h3>
+                     <p>We use high-quality materials to ensure the product is durable.</p>
+                  </div>
+               </div>
+               <div class="box">
+                  <img src="https://img.icons8.com/ios-filled/50/FF0000/like.png" alt="Small Pricing">
+                  <div>
+                     <h3>Small Pricing</h3>
+                     <p>We offer the best competitive price in the market for all our products.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Right Section -->
+            <div class="right">
+               <h2>LED Signage & Glow Sign Board Experts</h2>
+               <p>
+                  At BrandScape Corporation of India,We have seen our clients flourish and grow along with us. It is a journey we have set together and today we stand at a point with customers to back us with nothing but a 100% positive feedback and cent percent customer satisfaction. We have separate creative team, professional artists, and best printing services squad who work round the clock in tandem to deliver the best results for our customers.
+               </p>
+            </div>
+         </div>
       </section>
       <section id="contact" class="section contact">
          <h2>Contact Us</h2>
-         <p>Have a project or idea? We'd love to hear from you!</p>
-         <p>Email: <a href="mailto: brandscapec@gmail.com">brandscapec@gmail.com</a></p>
-         <p>Phone: +91 9205706979/7042016979</p>
-         <form onsubmit="return validateForm ()">
-            <label for="name">Name *</label>
-            <input id="name" name="name" type="text" placeholder="Your full name" required />
-            <label for="email">Email *</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-            <button type="submit">Send Message</button>
-         </form>
+         <section class="contact-section">
+            <p class="intro">Have a project or idea? We'd love to hear from you!</p>
+            <div class="contact-item">
+               <img src="https://img.icons8.com/ios-filled/50/FF0000/marker.png" alt="Location">
+               <p>Address: Plot no 281, Gyan Khand I, Indirapuram, Ghaziabad, Uttar Pradesh 201014</p>
+            </div>
+            <div class="contact-item">
+               <img src="https://img.icons8.com/ios-filled/50/FF0000/phone.png" alt="Phone">
+               <p>
+                  Mob: <a href="tel:+919205706979">+91-9205706979</a> / 
+                  <a href="tel:+917042016979">+91-7042016979</a>
+               </p>
+            </div>
+            <div class="contact-item">
+               <img src="https://img.icons8.com/ios-filled/50/FF0000/new-post.png" alt="Email">
+               <p>Email: <a href="mailto:brandscapec@gmail.com">brandscapec@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+               <img src="https://img.icons8.com/ios-filled/50/FF0000/domain.png" alt="Website">
+               <p>Website: <a href="https://brandscapec-crypto.github.io/BSCOI/" target="_blank">https://brandscapec-crypto.github.io/BSCOI/</a></p>
+            </div>
+            <form onsubmit="return validateForm ()">
+               <label for="name">Name *</label>
+               <input id="name" name="name" type="text" placeholder="Your full name" required />
+               <label for="email">Email *</label>
+               <input id="email" name="email" type="email" placeholder="you@example.com" required />
+               <label for="message">Message *</label>
+               <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+               <button type="submit">Send Message</button>
+            </form>
+         </section>
       </section>
       <footer>
          <p>© 2025 BrandScape Corporation of India. All rights reserved.</p>
